@@ -1,201 +1,85 @@
-# MXZ 
+# 🏥 SISTEMA MÉDICO DE ESTABILIDADE DA CABEÇA
 
-# 🏥 Sistema Médico de Estabilidade da Cabeça
 
-[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://python.org)
-[![OpenCV](https://img.shields.io/badge/OpenCV-4.x-green.svg)](https://opencv.org)
-[![Flask](https://img.shields.io/badge/Flask-Latest-red.svg)](https://flask.palletsprojects.com)
-[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+## O que é isso?
 
-##  Descrição
+Esse sistema foi criado para ajudar médicos e técnicos a garantir que o paciente fique com a cabeça bem paradinha durante exames como ressonância magnética, tomografia e raio-x. Sabe quando o paciente se mexe e precisa repetir o exame? Aqui, a ideia é evitar exatamente isso!
 
-Sistema médico avançado para monitoramento em tempo real da estabilidade da cabeça de pacientes durante procedimentos de imagem diagnóstica. Desenvolvido especificamente para garantir a qualidade de exames que exigem imobilidade absoluta do paciente.
+## Por que isso é importante?
 
-##  Problemática
+Durante esses exames, qualquer movimento da cabeça pode borrar as imagens, dificultar o diagnóstico e até obrigar a repetir tudo de novo. Isso gera:
+- Mais tempo de exame
+- Desconforto para o paciente
+- Gastos extras para o hospital
+- E pode até atrasar o tratamento
 
-### Desafios em Procedimentos de Imagem Médica
+## Como o sistema ajuda?
 
-Os exames de imagem diagnóstica são fundamentais na medicina moderna, porém enfrentam um desafio crítico: **a necessidade de estabilidade absoluta da cabeça do paciente**. Mesmo movimentos mínimos podem comprometer significativamente a qualidade das imagens, resultando em:
+- Monitora em tempo real se o paciente está imóvel
+- Dá avisos visuais e sonoros se detectar qualquer movimento
+- Só libera o exame quando a cabeça estiver estável pelo tempo necessário
+- Permite ajustar a sensibilidade e o tempo de estabilidade conforme o exame e o paciente
 
-- **Repetição de exames** (custos adicionais e exposição desnecessária)
-- **Diagnósticos imprecisos** devido à qualidade comprometida das imagens
-- **Perda de tempo** em procedimentos que requerem agendamento complexo
-- **Desconforto do paciente** em reposicionamentos múltiplos
-- **Desperdício de recursos** médicos e hospitalares
+## Quem mais se beneficia?
 
-### Procedimentos Críticos Afetados
+- Crianças (que têm dificuldade de ficar paradas)
+- Idosos ou pessoas com tremores
+- Pacientes com necessidades especiais
+- Situações de emergência, onde o paciente pode estar agitado
 
-####  Ressonância Magnética do Crânio
-Durante esse exame, qualquer movimento da cabeça pode comprometer a qualidade das imagens. O paciente deve permanecer completamente imóvel, pois o equipamento gera imagens detalhadas do cérebro com base em campos magnéticos e ondas de radiofrequência.
+## Como funciona na prática?
 
-- **Duração:** 15-45 minutos
-- **Impacto do movimento:** Artefatos de movimento que obscurecem estruturas cerebrais
-- **Consequências:** Impossibilidade de detectar lesões pequenas, necessidade de repetição
+- O sistema usa uma câmera comum (webcam)
+- Se o paciente se mexer, aparece um alerta na tela e toca um aviso
+- Quando o paciente ficar imóvel, o sistema libera para continuar o exame
+- Tudo é feito localmente, sem salvar imagens, garantindo privacidade
 
-#### 🏥 Tomografia Computadorizada da Cabeça
-Assim como na ressonância, a tomografia exige que o paciente fique imóvel para que as imagens sejam captadas com precisão. Movimentos podem causar distorções ou necessidade de repetir o exame.
+## Tecnologias usadas
 
-- **Duração:** 10-30 minutos
-- **Impacto do movimento:** Distorções nas imagens seccionais
-- **Consequências:** Diagnósticos imprecisos de fraturas, hemorragias ou tumores
+- Python, OpenCV, Flask, pyttsx3 (voz), entre outras
 
-#### 📡 Radiografia da Cabeça (Raio-X)
-Utilizada para avaliar estruturas ósseas, como seios da face ou mandíbula, também requer que o paciente mantenha a cabeça estável para evitar imagens borradas.
-
-- **Duração:** 2-10 minutos
-- **Impacto do movimento:** Imagens borradas das estruturas ósseas
-- **Consequências:** Avaliação inadequada de seios da face, mandíbula e fraturas
-
-### Populações Vulneráveis
-
-O problema é especialmente crítico em:
-- **Pacientes pediátricos** (dificuldade natural de permanecer imóvel)
-- **Idosos com tremores** ou condições neurológicas
-- **Pacientes com deficiências cognitivas**
-- **Casos de emergência** com pacientes agitados ou em dor
-- **Procedimentos longos** onde a fadiga compromete a estabilidade
-
-## 💡 Solução Oferecida
-
-### Aplicação do Sistema
-
-Nosso sistema de monitoramento da estabilidade da cabeça pode ser integrado a esses exames para:
-
-- **Confirmar automaticamente** quando o paciente está imóvel
-- **Evitar repetições** de exames por movimentação
-- **Aumentar a eficiência** e reduzir o tempo de preparação
-- **Apoiar pacientes** com dificuldades motoras ou neurológicas, garantindo que o exame só seja iniciado quando houver estabilidade suficiente
-
-####  Detecção Precisa em Tempo Real
-- **Algoritmos de visão computacional** com precisão submilimétrica
-- **Monitoramento contínuo** da posição da cabeça
-- **Análise de estabilidade** baseada em múltiplos parâmetros
-- **Feedback visual e sonoro** imediato
-
-#### ⚡ Automação Inteligente
-- **Confirmação automática** quando o paciente está adequadamente posicionado
-- **Sinal verde** para início seguro do procedimento
-- **Interrupção automática** em caso de movimento excessivo
-- **Relatórios detalhados** de estabilidade
-
-#### 🔧 Configurabilidade Médica
-- **Sensibilidade ajustável** (alta, média, baixa)
-- **Tempos de estabilidade personalizáveis** (2-10 segundos)
-- **Thresholds específicos** para diferentes tipos de exame
-- **Interface médica profissional**
-
-### Benefícios Diretos
-
-#### Para os Pacientes
-✅ **Redução de repetições** de exames  
-✅ **Menor tempo de exposição** à radiação  
-✅ **Experiência menos estressante**  
-✅ **Feedback tranquilizador** durante o posicionamento  
-
-#### Para os Profissionais de Saúde
-✅ **Eficiência operacional** aumentada  
-✅ **Qualidade de imagem** garantida  
-✅ **Redução de custos** operacionais  
-✅ **Fluxo de trabalho** otimizado  
-
-#### Para as Instituições
-✅ **ROI positivo** através da redução de repetições  
-✅ **Satisfação do paciente** aumentada  
-✅ **Utilização otimizada** dos equipamentos  
-✅ **Conformidade** com protocolos de qualidade  
-
-## 🛠️ Características Técnicas
-
-### Tecnologias Utilizadas
-
-| Componente | Tecnologia | Versão |
-|------------|------------|---------|
-| **Visão Computacional** | OpenCV | 4.x+ |
-| **Detecção Facial** | Haar Cascades | Nativa |
-| **Interface Web** | Flask | 3.x+ |
-| **Processamento** | Python | 3.8+ |
-| **TTS** | pyttsx3 | 2.x+ |
-
-### Especificações do Sistema
-
-#### Precisão de Detecção
-- **Resolução mínima:** 640x480 pixels
-- **Taxa de detecção:** 30 FPS
-- **Precisão de movimento:** ±5 pixels
-- **Latência:** < 100ms
-
-#### Configurações Médicas
-```python
-Sensibilidade Alta:    5px  de movimento máximo
-Sensibilidade Média:   10px de movimento máximo  
-Sensibilidade Baixa:   20px de movimento máximo
-
-Tempo de Estabilidade: 2-10 segundos configurável
-```
-
-##  Instalação e Uso
+## Como instalar e usar
 
 ### Pré-requisitos
-```bash
-Python 3.8+
-Webcam ou câmera USB
-4GB RAM mínimo
-```
+- Python 3.8 ou superior
+- Uma webcam ou câmera USB
+- 4GB de RAM no mínimo
 
 ### Instalação
 ```bash
 # 1. Clone o repositório
-git clone https://github.com/kelvinmxz/VisaoComputacional.git
-cd VisaoComputacional
+git clone https://github.com/kelvinmxz/EstabilidadeDoCranio.git
+cd EstabilidadeDoCranio
 
-# 2. Crie ambiente virtual
-python -m venv venv
-venv\Scripts\activate  # Windows
+# 2. Instale as dependências
+pip install -r requirements.txt
 
-# 3. Instale dependências
-pip install flask opencv-python ultralytics pyttsx3 numpy pillow
-
-# 4. Execute o sistema médico
+# 3. Execute o sistema médico
 python medical_app.py
 ```
 
 ### Acesso
-```
-http://localhost:5000
-```
+Abra seu navegador e acesse: http://localhost:5000
 
-## 📊 Interface do Sistema
+## O que você vai ver na tela?
 
-### Painel Principal
-- **Visualização em tempo real** da câmera
-- **Indicadores visuais** de estabilidade (Verde/Amarelo/Vermelho)
-- **Informações detalhadas** de posicionamento
-- **Controles médicos** profissionais
+- Imagem da câmera em tempo real
+- Indicadores coloridos mostrando se está tudo ok ou se houve movimento
+- Controles para iniciar/parar o procedimento e ajustar as configurações
+- Relatórios e feedback por voz em português
 
-### Recursos
-- **Iniciar/Parar Procedimento**
-- **Configurar Sensibilidade** (Alta/Média/Baixa)
-- **Ajustar Tempo de Estabilidade** (2-10 segundos)
-- **Relatórios de Status** em tempo real
-- **Feedback de voz** em português
+## Resultados esperados
 
-## 📈 Resultados Esperados
+- Menos repetições de exame
+- Imagens mais nítidas e diagnósticos mais precisos
+- Menos tempo de preparo e mais conforto para o paciente
+- Satisfação maior para todos
 
-### Métricas de Eficiência
+## Segurança
 
-| Métrica | Antes do Sistema | Com o Sistema | Melhoria |
-|---------|------------------|---------------|----------|
-| **Repetições de Exame** | 15-25% | 2-5% | 80% redução |
-| **Tempo de Preparação** | 10-15 min | 3-5 min | 60% redução |
-| **Qualidade de Imagem** | 85% aceitável | 98% aceitável | 15% melhoria |
-| **Satisfação do Paciente** | 70% | 95% | 35% melhoria |
-
-## 🔒 Segurança e Conformidade
-
-- **Processamento local** apenas
-- **Dados temporários** em memória
-- **Sem armazenamento** de imagens
-- **Logs auditáveis** de procedimentos
+- Todo o processamento é feito localmente
+- Nenhuma imagem é salva
+- Os dados são temporários e protegidos
 
 ---
 
@@ -203,4 +87,4 @@ http://localhost:5000
 
 MIT License - Desenvolvido para **melhoria da qualidade dos cuidados médicos** e **segurança do paciente**.
 
-**Versão:** 1.0.0 | **Status:** Produção Ready
+**Versão:** 1.0.0 | **Status:** Pronto para uso

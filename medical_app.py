@@ -101,7 +101,7 @@ print("🏥 Inicializando Sistema Médico de Estabilidade...")
 analyzer = MedicalHeadStabilityAnalyzer(
     stability_threshold=8,      # Movimento máximo permitido (pixels)
     time_threshold=3.0,         # Tempo necessário de estabilidade (segundos)
-    sensitivity='medium'        # Sensibilidade: high, medium, low
+    sensitivity='medium'        # Sensibilidade: 
 )
 print("✅ Sistema Médico inicializado!")
 
